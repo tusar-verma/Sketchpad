@@ -1,0 +1,29 @@
+
+#contentPage {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(16, 20px);    
+    grid-template-rows: repeat(16, 20px);    
+    border: 1px solid red;
+}
+
+.gridElement {
+    border: 1px solid gray;
+}
+
+.Menu {
+    margin: 10px;
+}
+
+#resetButton {
+    width: 100px;
+    height: 20px;
+}
