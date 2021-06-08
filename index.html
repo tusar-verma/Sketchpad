@@ -2,14 +2,20 @@
     <head>
         <title>ETCH-A-SKETCH</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css"><link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="contentPage">
             <div class="Menu">
-                <button id="resetButton" onclick="reset()">Reset</button>
+                <input id="colorPicker" type="color">
+                <button onclick="toggleRandomColor()">Random</button>
+                <button onclick="erase()">Eraser</button>
+                <button onclick="createNewGrid()">Reset</button>
             </div>
-            <div class="gridContainer"></div>
+            <div id="gridContainer">
+                <div class="grid"></div>
+            </div>
         </div>
         <script src="script.js"></script>
     </body>
