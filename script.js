@@ -12,6 +12,7 @@ for (let index = 0; index < 16; index++) {
         gridelement.classList.add("gridElement");
         gridelement.onmouseenter = () => {
             if (isMouseDown) {
+                clearSelection();
                 gridelement.style.backgroundColor = color;
             }
         }
@@ -26,3 +27,8 @@ function reset(){
         gridElement.style.backgroundColor = "white";
     });
 }
+
+function clearSelection() {
+    if (window.getSelection) {window.getSelection().removeAllRanges();}
+    else if (document.selection) {document.selection.empty();}
+ }
