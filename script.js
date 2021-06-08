@@ -1,4 +1,12 @@
+let gridsize = 0;
+while (gridsize < 16 || gridsize > 100) {
+    gridsize = prompt("Please enter a grid size (16 to 100)");
+}
+
 const gridcontainer = document.querySelector(".gridContainer");
+gridcontainer.style.gridTemplateColumns = `repeat(${gridsize}, 1fr)`;
+gridcontainer.style.gridTemplateRows = `repeat(${gridsize}, 1fr)`;
+
 let isMouseDown = false;
 let color= "rgb(0,0,0)";
 
@@ -8,8 +16,8 @@ window.addEventListener("mousedown", (e) => {
 })
 window.addEventListener("mouseup", (e) => isMouseDown = false)
 
-for (let index = 0; index < 16; index++) {
-    for (let index = 0; index < 16; index++) {
+for (let index = 0; index < gridsize; index++) {
+    for (let index = 0; index < gridsize; index++) {
         const gridelement = document.createElement("div");
         gridelement.classList.add("gridElement");
         gridelement.addEventListener("mouseenter", draw);
@@ -32,6 +40,10 @@ function reset(){
     Array.from(gridElements).forEach(gridElement => {
         gridElement.style.backgroundColor = "white";
     });
+}
+
+function createGrid(){
+
 }
 
 // source: https://stackoverflow.com/questions/62224280/strange-and-unexpected-behaviour-with-javascript-mousedown-mouseup-and-mouseov

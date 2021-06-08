@@ -10,8 +10,8 @@
 
 .gridContainer {
     display: grid;
-    grid-template-columns: repeat(16, 20px);    
-    grid-template-rows: repeat(16, 20px);    
+    width: 600px;
+    height: 600px;
     border: 1px solid red;
 }
 
